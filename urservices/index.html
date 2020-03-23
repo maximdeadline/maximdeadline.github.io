@@ -17,7 +17,9 @@
 	<title>Деловые услуги</title>
 </head>
 <body>
-
+	<!-- <div class="arrow">
+		<svg viewBox="4 0 24 32" width="24" height="32" x="144" y="192" xmlns="http://www.w3.org/2000/svg"><path d="M14 24a1 1 0 0 1-.73-1.68l5.62-6a.48.48 0 0 0 0-.62l-5.62-6a1 1 0 0 1 1.46-1.36l5.62 6a2.46 2.46 0 0 1 0 3.34l-5.62 6A1 1 0 0 1 14 24z" fill="#767676" data-name="Arrow Right"/></svg>
+	</div> -->
 	<div class="header header-lg">
 		<div class="container header-lg">
 			<div class="row">
@@ -62,6 +64,11 @@
 	</div>
 
 	<div class="header header-md">
+		<div class="menu">
+			<button class="menu-btn"><svg viewBox="4 0 24 32" width="24" height="32" x="168" y="160" xmlns="http://www.w3.org/2000/svg"><path d="M23 17H9a1 1 0 0 1 0-2h14a1 1 0 0 1 0 2zm-4.67-5H9a1 1 0 0 1 0-2h9.33a1 1 0 0 1 0 2zm2.8 10H9a1 1 0 0 1 0-2h12.13a1 1 0 0 1 0 2z" fill="#767676"/></svg></button>
+			<button class="menu-btn2"><svg viewBox="4 0 24 32" width="24" height="32" x="168" y="160" xmlns="http://www.w3.org/2000/svg"><path d="M23 17H9a1 1 0 0 1 0-2h14a1 1 0 0 1 0 2zm-4.67-5H9a1 1 0 0 1 0-2h9.33a1 1 0 0 1 0 2zm2.8 10H9a1 1 0 0 1 0-2h12.13a1 1 0 0 1 0 2z" fill="#767676"/></svg></button>
+			<span>Меню</span>
+		</div>
 		<div class="container">
 			<div class="header-md-wrap">
 				<div class="header-md-logo">
@@ -104,6 +111,17 @@
 			</div>
 		</div>
 	</div>
+
+<div class="menu-nav">
+	<ul>
+		<li class="menu-nav-item"><a class="menu-nav-link" href="">О компании</a></li>
+		<li class="menu-nav-item"><a class="menu-nav-link" href="">Услуги</a></li>
+		<li class="menu-nav-item"><a class="menu-nav-link" href="">Отзывы</a></li>
+		<li class="menu-nav-item"><a class="menu-nav-link" href="">Вопросы</a></li>
+		<li class="menu-nav-item"><a class="menu-nav-link" href="">Контакты</a></li>
+		<li class="menu-nav-item"><a class="menu-nav-link" href="">География</a></li>
+	</ul>
+</div>
 
 	<div class="main">
 		<div class="container">
@@ -354,21 +372,21 @@
 	<footer class="footer">
 		<div class="container">
 			<div class="row footer-row">
-				<div class="col-lg-2">
+				<div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-12">
 					<div class="footer-logo">
-						<img src="img/logo-crop.png" alt="">
-						<p class="footer-td-text">Деловые<br>услуги</p>
+						<img src="img/logo-light.png" alt="">
+						<!-- <p class="footer-td-text">Деловые<br>услуги</p> -->
 					</div>
 				</div>
 				<!-- <div class="col-lg-3">
 				</div> -->
-				<div class="col-lg-3 offset-lg-3">
+				<div class="col-xl-3 col-lg-3 offset-xl-3 offset-lg-2 col-md-4 col-sm-4">
 					<div class="footer-adress">
 						<p>г. Москва, станция метро Деловой Центр, Пресненская наб., 12, ММЦД "Москва-Сити", ФЕДЕРАЦИЯ Восток, 16 эт., оф.7.2,<br>info@del.ru</p>
 					</div>
 				</div>
-				<div class="col-lg-1"></div>
-				<div class="col-lg-3 footer-contacts">
+				<div class="col-xl-1 ofs"></div>
+				<div class="col-xl-3 col-lg-4 col-md-4 col-sm-4 footer-contacts">
 					<span><a href="#" class="header-contacts-phone">+7 (499) 216-71-36</a>
 					<br>Пн-Пт: с 9:00 до 18:00</span>
 					<div class="footer-icon">
@@ -393,6 +411,17 @@
 
 	<script>
 		$(document).ready(function(){
+			$('.menu-btn').on('click', function(event) {
+				// $('.menu-nav').slideToggle();
+				$('.menu-nav').fadeIn('fast');
+				$(this).hide();
+				$('.menu-btn2').show();
+			});
+			$('.menu-btn2').on('click', function(event) {
+				$('.menu-nav').fadeOut('fast');
+				$(this).hide();
+				$('.menu-btn').show();
+			});
 			$('img.img-svg').each(function(){
 			var $img = $(this);
 			var imgClass = $img.attr('class');
@@ -408,7 +437,7 @@
 				}
 				$img.replaceWith($svg);
 			}, 'xml');
-		}),
+			});
 	  		$('.feedback-slider').slick({
 	  			prevArrow: '<button type="button" class="feedback-slider-btn feedback-slider-btn-prev"><img src="img/prev.png" alt=""></button>',
 				nextArrow: '<button type="button" class="feedback-slider-btn feedback-slider-btn-next"><img src="img/next.png" alt=""></button>'
