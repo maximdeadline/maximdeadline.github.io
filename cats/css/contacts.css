@@ -1,0 +1,30 @@
+.header-nav a:nth-child(1) ~ div{
+-webkit-transform: translate(567px) scaleX(1.22);
+        transform: translate(567px) scaleX(1.22);
+}
+.header-nav a ~ div {
+-webkit-transform: translate(567px) scaleX(1.22);
+        transform: translate(567px) scaleX(1.22);
+background-color: #444;
+}
+.header-nav a:nth-child(1):hover {
+	color: #5b3470;
+}
+.header-nav a:nth-child(6):hover {
+  color: inherit;
+}
+.header-nav a:nth-child(1):hover ~ div {
+-webkit-transform: translate(0) scaleX(0.99999);
+          transform: translate(0) scaleX(0.99999);
+background-color: #5b3470;
+}
+.header-nav a:nth-child(6):hover ~ div {
+background-color: #444;
+}
+
+@media (max-width: 992px) {
+  .header-nav a:nth-child(1) ~ div {
+  	-webkit-transform: translate(637%) scaleX(1.22);
+        transform: translate(637%) scaleX(1.22);
+  }
+}

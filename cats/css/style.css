@@ -273,6 +273,8 @@ label.hamburger {
   background: #444;
 }
 .header-nav a:nth-child(1) ~ div {
+  -webkit-transform: scaleX(0.999999);
+          transform: scaleX(0.999999);
   -webkit-transition: all .33s linear;
   transition: all .33s linear;
 }
@@ -315,6 +317,8 @@ label.hamburger {
   transition: all .33s linear;
 }
 .header-nav a:nth-child(1):hover {
+  -webkit-transform: scaleX(0.9999999);
+          transform: scaleX(0.9999999);
   color: inherit;
 }
 .header-right {
@@ -390,6 +394,8 @@ label.hamburger {
 .header-mob {
   display: none;
   overflow-x: hidden;
+  -webkit-box-shadow: 0 2px 4px rgba(241, 241, 241, 0.5);
+          box-shadow: 0 2px 4px rgba(241, 241, 241, 0.5);
 }
 .header-mob-menu {
   display: -webkit-box;
@@ -518,6 +524,90 @@ label.hamburger {
   left: 0;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.8)), color-stop(50%, rgba(255, 255, 255, 0.3)), to(rgba(255, 255, 255, 0.1)));
   background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.1) 100%);
+}
+.cats-main h1 {
+  font-size: 4rem;
+  margin: 0 auto;
+  margin-top: 4rem;
+  text-align: center;
+  color: #543f5f;
+}
+.cats-main-text {
+  margin-top: 3rem;
+  font-size: 2rem;
+}
+.cats-photo {
+  padding: 2rem;
+  padding-left: 0;
+}
+.cats-photo img {
+  max-width: 100%;
+}
+.cats-text {
+  padding: 2rem;
+  right: 0;
+}
+.cats-text h4 {
+  font-size: 3rem;
+  color: #543f5f;
+  padding-bottom: 2rem;
+}
+.cats-text p {
+  font-size: 2rem;
+}
+.kittens-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 5rem;
+}
+.kittens-header h1 {
+  font-size: 4rem;
+  color: #543f5f;
+}
+.general-border-king,
+.general-border-queen,
+.general-border-kittens {
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+  width: 100%;
+  height: 2px;
+  background-color: #543f5f;
+}
+.general-border-king:before,
+.general-border-queen:before,
+.general-border-kittens:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  font-size: 3rem;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 0 1rem;
+  text-transform: uppercase;
+  color: #543f5f;
+}
+.general-border-king:before {
+  content: "Коты";
+}
+.general-border-queen:before {
+  content: "Кошки";
+}
+.general-border-kittens:before {
+  content: "Котята";
+}
+.bb1 {
+  border-bottom: 1px solid #999;
+}
+.bt1 {
+  border-top: 1px solid #999;
 }
 @media (max-width: 1200px) {
   .header-logo-text p {
@@ -656,14 +746,11 @@ label.hamburger {
   }
 }
 @media (max-width: 468px) {
-  .header-logo img {
-    height: 5rem;
-  }
-  .header-mob span {
-    display: none;
-  }
   .header-mob-menu label.hamburger {
-    top: 10px;
+    top: 1.5rem;
+  }
+  input.hamburger:checked ~ label {
+    top: 1.5rem;
   }
   .main h1 {
     text-align: center;
@@ -679,6 +766,20 @@ label.hamburger {
   .main .container,
   .main .row {
     width: auto;
+  }
+}
+@media (max-width: 440px) {
+  .header-logo img {
+    height: 5rem;
+  }
+  .header-mob span {
+    display: none;
+  }
+  .header-mob-menu label.hamburger {
+    top: 10px;
+  }
+  input.hamburger:checked ~ label {
+    top: 1rem;
   }
 }
 @media (max-width: 400px) {
