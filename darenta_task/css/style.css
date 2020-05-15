@@ -1,0 +1,84 @@
+button:focus,
+input:focus,
+a:focus,
+textarea:focus {
+  outline: none;
+}
+.nav-wrapper {
+  background-color: #58be5e;
+}
+nav .brand-logo i {
+  margin-right: 2rem !important;
+  margin-left: 2rem !important;
+}
+ul.hide-on-med-and-down a {
+  height: 64px;
+  line-height: 10px;
+  text-align: center;
+  padding-top: 7px;
+}
+ul.hide-on-med-and-down li {
+  height: 64px;
+}
+ul.hide-on-med-and-down svg {
+  height: 25px;
+  width: 25px;
+  display: inline-block;
+  overflow: hidden;
+}
+ul.hide-on-med-and-down span {
+  display: block;
+  line-height: 25px;
+}
+ul.hide-on-med-and-down svg {
+  fill: #fff;
+}
+.dropdown-content {
+  top: 64px !important;
+}
+.dropdown-content a {
+  padding: 7px 8px !important;
+  line-height: 20px !important;
+}
+.main {
+  background: url(../img/main-bg.jpeg) no-repeat;
+  background-size: 100%;
+  background-position: top -200px left 0;
+  height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.main h1 {
+  color: #fff;
+  font-size: 5.5rem;
+}
+.main p {
+  color: #fff;
+  font-size: 2rem;
+}
+.about-text h2 {
+  font-size: 4rem;
+}
+.about-text p {
+  font-size: 1.8rem;
+}
+.about-plan {
+  margin-top: 5rem;
+}
+.about-plan-element {
+  text-align: center;
+}
+.about-plan-element i {
+  color: #58be5e;
+  font-size: 4rem;
+}
+.about-plan-element p {
+  font-size: 1.5rem;
+}

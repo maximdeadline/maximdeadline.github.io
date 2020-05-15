@@ -1,0 +1,85 @@
+@main-color: #58be5e;
+
+button, input, a, textarea {
+	&:focus {
+		outline: none;
+	}
+}
+.nav-wrapper {
+	background-color: @main-color;
+}
+nav .brand-logo i{
+	margin-right: 2rem !important;
+	margin-left: 2rem !important;
+}
+ul.hide-on-med-and-down {
+	a {
+		height: 64px;
+		line-height: 10px;
+		text-align: center;
+		padding-top: 7px;
+	}
+	li {
+		height: 64px;
+	}
+	svg {
+		height: 25px;
+		width: 25px;
+		display: inline-block;
+		overflow: hidden;	
+	}
+	span {
+		display: block;		
+		line-height: 25px;
+	}
+	svg {
+		fill: #fff;
+	}
+}
+.dropdown-content {
+	top: 64px !important;
+	a {
+		padding: 7px 8px !important;
+		line-height: 20px !important;
+	}
+}
+.main{
+	background: url(../img/main-bg.jpeg) no-repeat;
+	background-size: 100%;
+	background-position: top -200px left 0;
+	height: 500px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	h1 {
+		color: #fff;
+		font-size: 5.5rem;
+	}
+	p {
+		color: #fff;
+		font-size: 2rem;
+	}
+}
+.about {
+	&-text {
+		h2 {
+			font-size: 4rem;
+		}
+		p {
+			font-size: 1.8rem;
+		}
+	}
+	&-plan {
+		margin-top: 5rem;
+		&-element {
+			text-align: center;
+			i {
+				color: @main-color;
+				font-size: 4rem;
+			}
+			p {
+				font-size: 1.5rem;
+			}
+		}
+	}
+}
